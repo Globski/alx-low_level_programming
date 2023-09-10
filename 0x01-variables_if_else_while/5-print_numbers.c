@@ -13,8 +13,9 @@ int main(void)
 	single_d = 0;
 	while (single_d < 10)
 {
-		printf("%d\n", single_d);
+		printf("%d", single_d);
 		single_d++;
 }
+		putchar('\n');
 	return (0);
 }
