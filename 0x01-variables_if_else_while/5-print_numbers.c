@@ -13,6 +13,7 @@ int main(void)
 	for (single_d = 0; single_d < 10; single_d++)
 {
 		printf("%d", single_d);
+		printf("\n");
 }
 	return (0);
 }
