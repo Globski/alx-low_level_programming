@@ -10,7 +10,7 @@ int main(void)
 {
 	int single_d;
 
-	for (single_d = 0; single_d <= 10; single_d++)
+	for (single_d = 0; single_d <= 9; single_d++)
 {
 		printf("%d", single_d);
 }
