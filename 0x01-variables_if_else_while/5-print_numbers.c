@@ -9,7 +9,7 @@
 int main(void)
 {
 	int single_d;
-	
+
 	single_d = 0;
 	while (single_d < 10)
 {
