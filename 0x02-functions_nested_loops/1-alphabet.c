@@ -9,8 +9,6 @@
 */
 
 void print_alphabet(void);
-
-int main(void)
 {
 	char alphabet_l = 'a';
 
