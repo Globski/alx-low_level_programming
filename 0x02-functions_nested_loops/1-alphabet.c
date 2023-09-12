@@ -1,13 +1,8 @@
 #include "main.h"
-/**
- * main - Main entry point
- *
- * print_alphabet: A function that prints the alphabet, in
- * lowercase, followed by a new line.
- *
- * Return: Always 0
-*/
 
+/**
+  * print_alphabet - Print alphabets in lowercase.
+  */
 void print_alphabet(void)
 {
 	char alphabet_l = 'a';
