@@ -8,7 +8,7 @@
  * Return: Always 0
 */
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	for (int alphabet_10x = 1; alphabet_10x <= 10; alphabet_10x++)
 {
@@ -17,7 +17,7 @@ void print_alphabet_x10(void);
 	while (alphabet_l <= 'z')
 
 {
-		print_alphabet_x10(alphabet_l);
+		_putchar(alphabet_l);
 		alphabet_l++;
 }
 		 _putchar('\n');
