@@ -13,15 +13,24 @@ void times_table(void)
 {
 		tab = pr * nin;
 
+		if (tab == 0)
+
+{
+			_putchar('0');
+}
+		else
+{
+			_putchar(',');
+			_putchar(' ');
+}
+			_putchar(tab + '0');
+
 		if (tab < 10)
 {
 			_putchar(' ');
 }
-
-
-			_putchar(tab + '0');
-			_putchar(',');
-			_putchar(' ');
+			_putchar((tab / 10) + '0');
+			_putchar((tab % 10) + '0');
 }
 			_putchar('\n');
 }
