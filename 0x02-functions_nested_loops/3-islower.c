@@ -2,7 +2,7 @@
 /**
  * _islower - A function that checks for lowercase character.
  *
- * @c: The character in ASCII
+ * @c: The character checked
  *
  * Return: 1 for lowercase character, 0 otherwise.
 */
@@ -10,7 +10,7 @@
 int _islower(int c)
 {
 
-	if (c >= 97 && c <= 99)
+	if (c >= 'a' && c <= 'z')
 {
 	return (1);
 }
