@@ -19,8 +19,9 @@ void times_table(void)
 	if (tab <= 9)
 			_putchar(' ');
 	else
+{
 			_putchar((tab / 10) + '0');
-
+}
 			_putchar((tab % 10) + '0');
 }
 			_putchar('\n');
