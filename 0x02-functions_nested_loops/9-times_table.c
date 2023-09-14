@@ -7,16 +7,16 @@ void times_table(void)
 {
 	int pr, nin, tab;
 
-	for (pr = 0; pr <= 9; pr++)
+		for (pr = 0; pr <= 9; pr++)
 {
 			_putchar('0');
-	for (nin = 1; nin <= 9; nin++)
+		for (nin = 1; nin <= 9; nin++)
 {
 			_putchar(',');
 			_putchar(' ');
 		tab = pr * nin;
 
-	if (tab <= 9)
+		if (tab <= 9)
 			_putchar(' ');
 	else
 {
