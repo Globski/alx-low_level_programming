@@ -9,27 +9,18 @@ void times_table(void)
 
 	for (pr = 0; pr <= 9; pr++)
 {
-	for (nin = 0; nin <= 9; nin++)
-{
-		tab = pr * nin;
-
-		if (tab == 0)
-
-{
 			_putchar('0');
-}
-		else
+	for (nin = 1; nin <= 9; nin++)
 {
 			_putchar(',');
 			_putchar(' ');
-}
-			_putchar(tab + '0');
+		tab = pr * nin;
 
-		if (tab < 10)
-{
+	if (tab <= 9)
 			_putchar(' ');
-}
+	else
 			_putchar((tab / 10) + '0');
+
 			_putchar((tab % 10) + '0');
 }
 			_putchar('\n');
