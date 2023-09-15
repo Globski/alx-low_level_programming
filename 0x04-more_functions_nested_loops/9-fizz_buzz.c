@@ -16,16 +16,16 @@ int main(void)
 	for (buzz_test = 1; buzz_test <= 100; buzz_test++)
 	{
 
-		if (buzz_test % 3 == 0 && buzz_test % 5 == 0)
+		if ((buzz_test % 3) == 0 && (buzz_test % 5) == 0)
 		{
 			printf("FizzBuzz");
 		}
-		else if (buzz_test % 3 == 0)
+		else if ((buzz_test % 3) == 0)
 		{
 			printf("Fizz");
 
 		}
-		else if (buzz_test % 5 == 0)
+		else if ((buzz_test % 5) == 0)
 		{
 			printf("Buzz");
 		}
@@ -34,8 +34,12 @@ int main(void)
 			printf("%d", buzz_test);
 
 		}
-		printf(" ");
+		if (buzz_test == 100)
+		{
+		continue;
 	}
-	printf("\n");
-	return (0);
-}
+		printf(" ");
+		}
+		printf("\n");
+		return (0);
+	}
