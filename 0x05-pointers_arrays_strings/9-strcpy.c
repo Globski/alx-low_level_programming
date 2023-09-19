@@ -10,12 +10,15 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	int arr_loc;
+	int arr_loc = -1;
 
-	while (src[arr_loc])
-	{
-		dest[arr_loc] = src[arr_loc];
+	do {
 		arr_loc++;
+		dest[arr_loc] = src[arr_loc];
 	}
-	return (dest);
+
+	while (src[arr_loc] != '\0');
+	{
+		return (dest);
+	}
 }
