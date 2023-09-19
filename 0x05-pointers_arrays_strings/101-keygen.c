@@ -20,7 +20,7 @@ int main(void)
 		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
 		'_', '+', '[', ']', '{', '}', '|', ';', ':', ',',
 		'.', '<', '>', '?'};
-	const unsigned int PASS_LEN = 60;
+	const unsigned int PASS_LEN = 40;
 	unsigned int i, arr_loc;
 
 	srand(time(0));
