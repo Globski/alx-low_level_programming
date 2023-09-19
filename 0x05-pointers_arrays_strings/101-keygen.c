@@ -9,33 +9,35 @@
  */
 int main(void)
 {
-
-	char keys[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-		'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-		'u', 'v', 'w', 'x', 'y', 'z',
-		'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-		'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-		'U', 'V', 'W', 'X', 'Y', 'Z',
-		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-		'!', '@', '#', '$', '%', '^', '&', '*', '(', ')',
-		'_', '+', '[', ']', '{', '}', '|', ';', ':', ',',
-		'.', '<', '>', '?'};
-	const unsigned int PASS_LEN = 40;
-	unsigned int i, arr_loc;
+	char keys[84];
+	int arr_loc = 0, total = 0, diff;
 
 	srand(time(0));
 
-	char pass[PASS_LEN + 1];
-
-	for (i = 0; i < PASS_LEN; i++)
+	while (total < 2772)
 	{
-		arr_loc = rand() % (63 - 1);
-		pass[i] = keys[arr_loc];
+		keys[arr_loc] = 33 + rand() % 94;
+		total += keys[arr_loc++];
 	}
 
-	pass[PASS_LEN] = '\0';
+	keys[arr_loc] = '\0';
 
-	printf("Password: %s\n", pass);
+	if (total != 2772)
+	{
+		diff = (total - 2772) / 2;
+		if ((total - 2772) % 2 != 0)
+			diff++;
 
+		for (arr_loc = 0; keys[arr_loc]; arr_loc++)
+		{
+			if (keys[arr_loc] >= (33 + diff))
+			{
+				keys[arr_loc] -= diff;
+				break;
+			}
+		}
+	}
+
+	printf("%s\n", keys);
 	return (0);
 }
