@@ -17,7 +17,7 @@ char *_strcpy(char *dest, char *src)
 		dest[arr_loc] = src[arr_loc];
 	}
 
-	while (src[arr_loc] != '\0');
+	while (src[arr_loc] != '\0')
 	{
 		return (dest);
 	}
