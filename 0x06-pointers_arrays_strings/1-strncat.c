@@ -11,9 +11,9 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	char *join;
+	char *result;
 
-	for (join = dest; *dest != 0; dest++)
+	for (result = dest; *dest != 0; dest++)
 	{
 
 	}
@@ -28,6 +28,6 @@ char *_strncat(char *dest, char *src, int n)
 
 	*dest = 0;
 
-	return (join);
+	return (result);
 }
 
