@@ -4,7 +4,7 @@
  *
  * @str: The input string to encode.
  *
- * Return: A pointer to the modified string.
+ * Return: A pointer to the encoded string.
  */
 char *leet(char *str)
 {
