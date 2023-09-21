@@ -10,7 +10,7 @@
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *join = dest;
+	char *result = dest;
 
 
 	while (*src != 0 && n > 0)
@@ -29,5 +29,5 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 
-	return (join);
+	return (result);
 }
