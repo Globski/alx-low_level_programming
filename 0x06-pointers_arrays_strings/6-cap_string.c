@@ -10,7 +10,7 @@ char *cap_string(char *s)
 {
 
 	int i = 0;
-	
+
 	if (!s)
 		return (s);
 
