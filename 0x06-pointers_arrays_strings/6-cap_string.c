@@ -6,15 +6,18 @@
  *
  * Return:  A pointer to the modified string.
  */
-char *cap_string(char *s) {
+char *cap_string(char *s)
+{
 
-	if (s == 0 || *s == '\0') {
-		return s;  
+	if (s == 0 || *s == '\0')
+	{
+		return (s);
 	}
 
-	if (*s >= 'a' && *s <= 'z') {
-		*s -= ('a' - 'A');  
+	if (*s >= 'a' && *s <= 'z')
+	{
+		*s -= ('a' - 'A');
 	}
 
-	return s;
+	return (s);
 }
