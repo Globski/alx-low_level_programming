@@ -12,7 +12,7 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char *join = dest;
+	char *result = dest;
 
 	while (*dest)
 	{
@@ -28,5 +28,5 @@ char *_strcat(char *dest, char *src)
 
 	*dest = 0;
 
-	return (join);
+	return (result);
 }
