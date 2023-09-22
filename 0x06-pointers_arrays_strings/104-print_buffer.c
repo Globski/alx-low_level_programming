@@ -8,7 +8,6 @@
  */
 void print_buffer(char *b, int size)
 {
-	
 	int count, count_1;
 	char final;
 
