@@ -8,19 +8,24 @@
  */
 char *rot13(char *s)
 {
-	char *result, root;
+	int result, root;
+	char alphabet[52] = {"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"};
 
-	result = s;
+	char rot13key[52] = {"NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm"};
 
-	while (*s)
+	for (result = 0; s[result]; result++)
 	{
-		if ((*s >= 'A' && *s <= 'Z') || (*s >= 'a' && *s <= 'z'))
+		for (root = 0; root < 52; root++)
 		{
-			root = (*s >= 'a' && *s <= 'z') ? 'a' : 'A';
-			*s = (((*s - root + 13) % 26) + root);
+			if (s[result] == alphabet[root])
+			{
+				s[result] = rot13key[root];
+				break;
+			}
 		}
-		s++;
+
+
 	}
 
-	return (result);
+	return (s);
 }
