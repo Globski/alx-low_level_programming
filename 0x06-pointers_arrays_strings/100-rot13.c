@@ -10,9 +10,6 @@ char *rot13(char *s)
 {
 	char *result, root;
 
-	if (s == 0)
-		return (s);
-
 	result = s;
 
 	while (*s)
@@ -27,4 +24,3 @@ char *rot13(char *s)
 
 	return (result);
 }
-
