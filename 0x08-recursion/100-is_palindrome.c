@@ -35,12 +35,12 @@ int is_palindrome_recursive(char *s, int open, int close)
  */
 int _strlen(char *s)
 {
-    if (*s == '\0')
-    {
-        return (0);
-    }
+	if (*s == '\0')
+	{
+		return (0);
+	}
 
-    return (1 + _strlen(s + 1));
+	return (1 + _strlen(s + 1));
 }
 
 
@@ -53,5 +53,6 @@ int _strlen(char *s)
 int is_palindrome(char *s)
 {
 	int len = _strlen(s) - 1;
+
 	return (is_palindrome_recursive(s, 0, len));
 }
