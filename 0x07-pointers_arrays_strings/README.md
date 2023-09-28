@@ -1,3 +1,8 @@
+# Low-Level Programming - Pointers, arrays and strings 
+
+This repository contains C programs that demonstrate the use of Pointers, arrays and strings for various tasks.
+
+
 | Task Number | File Name               | Description                                                |
 |-------------|-------------------------|------------------------------------------------------------|
 | 0           | [0-memset.c](./0-memset.c) | Implement the `_memset` function that fills memory with a constant byte. |
