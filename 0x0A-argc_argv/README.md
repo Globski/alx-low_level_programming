@@ -4,7 +4,7 @@ This repository contains C programs that demonstrate the use of `argc` and `argv
 
 | Task                       | Description                         | Source Code |
 | -------------------------- | ----------------------------------- | ----------- |
-| [Task 0. Print Program Name](./0-whatsmyname.c) | Prints the name of the program. | [Link](./0-puts_recursion.c) |
+| [Task 0. Print Program Name](./0-whatsmyname.c) | Prints the name of the program. | [Link](./0-whatsmyname.c) |
 | [Task 1. Count Arguments](./1-args.c) | Prints the number of arguments passed into the program. | [Link](./1-args.c) |
 | [Task 2. Print Arguments](./2-args.c) | Prints all arguments received, one per line. | [Link](./2-args.c) |
 | [Task 3. Multiply Two Numbers](./3-mul.c) | Multiplies two numbers and prints the result. | [Link](./3-mul.c) |
