@@ -11,7 +11,7 @@
 char *argstostr(int ac, char **av)
 {
 
-	int len = ac;
+	int len = 0;
 	char *array;
 	int count, count_2, count_3 = 0;
 
