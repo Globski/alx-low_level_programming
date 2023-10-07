@@ -23,7 +23,7 @@ int *array_range(int min, int max)
 	if (memory == NULL)
 		return (NULL);
 
-	for (cont = 0; cont <= total; cont++)
+	for (cont = 0; cont < total; cont++)
 	{
 		memory[cont] = min++;
 	}
