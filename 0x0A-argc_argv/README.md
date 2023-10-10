@@ -2,7 +2,7 @@
 
 This repository contains C programs that demonstrate the use of `argc` and `argv` for command-line argument processing.
 
-| Task                       | Description                         | Source Code |
+| Project                      | Description                         | Source Code |
 | -------------------------- | ----------------------------------- | ----------- |
 | [Task 0. Print Program Name](./0-whatsmyname.c) | Prints the name of the program. | [Link](./0-whatsmyname.c) |
 | [Task 1. Count Arguments](./1-args.c) | Prints the number of arguments passed into the program. | [Link](./1-args.c) |
