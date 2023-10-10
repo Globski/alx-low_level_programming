@@ -2,7 +2,7 @@
 
 This repository contains C programs that demonstrate the use of recursion for various tasks.
 
-| Task                       | Description                         | Source Code |
+| Project                       | Description                         | Source Code |
 | -------------------------- | ----------------------------------- | ----------- |
 | [0. \_puts\_recursion](./0-puts_recursion.c) | Print a string using recursion | [Link](./0-puts_recursion.c) |
 | [1. \_print\_rev\_recursion](./1-print_rev_recursion.c) | Print a string in reverse using recursion | [Link](./1-print_rev_recursion.c) |
