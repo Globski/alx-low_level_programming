@@ -3,7 +3,7 @@
 This repository contains C programs that demonstrate the use of Pointers, arrays and strings for various tasks.
 
 
-| Task.       | Source Code               | Description                                                |
+| Project       | Source Code               | Description                                                |
 |-------------|-------------------------|------------------------------------------------------------|
 | 0-memset.c  | [Link](./0-memset.c) | Implement the `_memset` function that fills memory with a constant byte. |
 | 1-memcpy.c  | [Link](./1-memcpy.c) | Implement the `_memcpy` function that copies memory area.  |
