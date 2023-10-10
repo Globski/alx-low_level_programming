@@ -1,8 +1,8 @@
-# More Malloc and Free
+# Low-Level Programming - More Malloc and Free
 
 This repository contains C programs that demonstrate various memory allocation and manipulation techniques using `malloc`, `free`, and related functions.
 
-| Task                               | Description                                       | Source Link                                                                 |
+| Project                               | Description                                       | Source Link                                                                 |
 |------------------------------------|---------------------------------------------------|------------------------------------------------------------------------------|
 | **Malloc Checked**                 | Allocates memory using `malloc` with error handling | [Source Code](0-malloc_checked.c) |
 | **String Nconcat**                 | Concatenates two strings with memory allocation  | [Source Code](1-string_nconcat.c) |
