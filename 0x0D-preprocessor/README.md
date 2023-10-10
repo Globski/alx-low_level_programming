@@ -3,7 +3,7 @@
 
 This repository contains C programs and header files that demonstrate the use of preprocessor macros.
 
-| Task                | Description                                         | Source Code                                |
+| Project              | Description                                         | Source Code                                |
 |---------------------|-----------------------------------------------------|--------------------------------------------|
 | 0. Object-like Macro | Define macro SIZE as an abbreviation for 1024.      | [link](./0-object_like_macro.h) |
 | 1. Pi               | Define macro PI as an abbreviation for 3.14159265359. | [link](./1-pi.h)                         |
