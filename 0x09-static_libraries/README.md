@@ -2,7 +2,7 @@
 
 This repository contains C programs that demonstrate the use of static libraries for various tasks.
 
-| Task                       | Description                         | Source Code |
+| Project                       | Description                         | Source Code |
 | -------------------------- | ----------------------------------- | ----------- |
 | [Task 0. A library is not a luxury but one of the necessities of life](#) | Create a static library `libmy.a` containing various functions | [Link](./libmy.a) |
 | [Task 1. Without libraries what have we? We have no past and no future](#) | Create a script to build a static library `liball.a` | [Link](create_static_lib.sh) |
