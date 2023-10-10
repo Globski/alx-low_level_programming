@@ -2,7 +2,7 @@
 
 This repository contains C programs and header files that demonstrate the use of structures and typedef in low-level programming. Each program focuses on a specific task related to structures and typedef.
 
-| Project                                   | Description                                                              | Source Code                                                               |
+| Project                                   | Description                                                              | Source Link                                                              |
 |-------------------------------------------|--------------------------------------------------------------------------|---------------------------------------------------------------------------|
 | 0. Poppy                                 | Define a new type `struct dog` with specific elements.                  | [Source Code](./dog.h)                                   |
 | 1. A dog is the only thing on earth...   | Initialize a variable of type `struct dog`.                             | [Source Code](./1-init_dog.c)                     |
