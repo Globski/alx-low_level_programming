@@ -1,5 +1,5 @@
 
-# Project: C Preprocessor Macros
+# Low-Level Programming - Preprocessor Macros
 
 This repository contains C programs and header files that demonstrate the use of preprocessor macros.
 
