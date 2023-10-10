@@ -3,9 +3,9 @@
 
 /**
  * struct dog - Define a new type struct dog with elements.
- * @name: Name of the dog.
- * @age: Age of the dog.
- * @owner: Owner of the dog.
+ * @name: The name of the dog.
+ * @age: The age of the dog.
+ * @owner: The owner of the dog.
  *
  * Description: This structure defines a dog with a name, age, and owner.
  */
