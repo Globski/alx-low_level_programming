@@ -19,9 +19,14 @@
 
 ### [0x08-recursion](0x08-recursion)
 
-### [0x0A-argc_argv](0x0A-argc_argv)
-
 ### [0x09-static_libraries](0x09-static_libraries)
 
+### [0x0A-argc_argv](0x0A-argc_argv)
+
 ### [0x0B-malloc_free](0x0B-malloc_free)
+
 ### [0x0C-more_malloc_free](0x0C-more_malloc_free)
+
+### [0x0D-preprocessor](0x0D-preprocessor)
+
+### [0x0E-structures_typedef](0x0E-structures_typedef)
