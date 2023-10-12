@@ -1,5 +1,7 @@
 # Low-Level Programming -  Pointers, arrays and strings
 
+This repository contains C programs that demonstrate the use of Pointers, arrays and strings for various tasks.
+
 | project      | Description |
 | ----------- | ----------- |
 |  [0-reset_to_98.c](./0-reset_to_98.c)  | a function that takes a pointer to an int as parameter and updates the value it points to to 98.|
