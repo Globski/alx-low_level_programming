@@ -99,8 +99,8 @@ Our custom printf function includes several advanced features:
 
 This project is maintained by the following contributors:
 
-- [Your Name](https://github.com/your-username)
-- [Contributor Name](https://github.com/contributor-username)
+- [Ogunsemore Gloria](https://github.com/Globski)
+- [Emmanuel Ifediora](https://github.com/Manuelshub)
 
 ## License
 
