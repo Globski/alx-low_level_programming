@@ -21,7 +21,7 @@ This repository contains a collection of C programming projects covering various
 | [0x0E-structures_typedef](./0x0E-structures_typedef) | Discover how to work with structures and typedef to create custom data types in C. |
 | [0x0F-function_pointers](./0x0F-function_pointers) | Understand the concept of function pointers and how to use them to create flexible programs. |
 | [0x10-variadic_functions](./0x10-variadic_functions) | Dive into variadic functions and learn how to work with functions that accept a variable number of arguments. |
-| [0x11-printf](./0x11-printf) |  Implement a custom printf function in C that replicates the behavior of the standard library printf. This project focuses on handling various format specifiers, advanced features, and optimizing buffer usage for efficient printing. |
+| [0x11-printf](https://github.com/Globski/printf) |  Implement a custom printf function in C that replicates the behavior of the standard library printf. This project focuses on handling various format specifiers, advanced features, and optimizing buffer usage for efficient printing. |
 
 Feel free to explore each project's directory for more details, source code, and resources.
 
