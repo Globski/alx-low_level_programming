@@ -107,7 +107,7 @@ This project is maintained by the following contributors:
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Acknowledgments 🙏
+## Acknowledgments
 
 The `_printf` function emulates the functionality of the C standard library function `printf`. 
 We would like to express our sincere gratitude to [ALX Afica](https://www.alxafrica.com/) for providing the educational environment and guidance that enabled the development of this project.
