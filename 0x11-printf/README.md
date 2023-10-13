@@ -59,10 +59,10 @@ $ git clone https://github.com/your-username/printf.git
 After cloning, you can compile and link your code with our printf function using the provided Makefile.
 
 ## Usage
-To use the printf function, include the holberton.h header and call _printf with your desired format string and arguments. Here's a basic example:
+To use the printf function, include the main.h header and call _printf with your desired format string and arguments. Here's a basic example:
 
 ```c
-#include "holberton.h"
+#include "main.h"
 
 int main(void)
 {
