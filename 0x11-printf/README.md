@@ -13,6 +13,7 @@
 - [Advanced Features](#advanced-features)
 - [Contributors](#contributors)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Introduction
 
@@ -105,4 +106,13 @@ This project is maintained by the following contributors:
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Acknowledgments 🙏
+
+The `_printf` function emulates the functionality of the C standard library function `printf`. 
+We would like to express our sincere gratitude to [ALX Afica](https://www.alxafrica.com/) for providing the educational environment and guidance that enabled the development of this project.
+
+ALX Afica is a renowned full-stack software engineering program that prepares students for successful careers in the tech industry through project-based peer learning and a dedication to excellence. The project was created as part of the ALX Afica curriculum, and we want to acknowledge the institution for its invaluable support and resources.
+
+For more information about ALX Afica and its programs, please visit this [link](https://www.alxafrica.com/).
 
