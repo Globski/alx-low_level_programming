@@ -17,7 +17,7 @@
 
 ## Introduction
 
-Welcome to the Printf Project, where we implement a custom `printf` function in C. The project follows the rules and guidelines set forth by Holberton School and focuses on recreating the behavior of the standard C library `printf` function.
+Welcome to the Printf Project, where we implement a custom `printf` function in C. The project follows the rules and guidelines set forth by ALX Africa and focuses on recreating the behavior of the standard C library `printf` function.
 
 ## Objectives
 
