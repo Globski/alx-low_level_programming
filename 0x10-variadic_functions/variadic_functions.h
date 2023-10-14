@@ -7,6 +7,19 @@
 
 #include <stdarg.h>
 
+/**
+ * struct print - Struct to store format specifiers and
+ * corresponding functions
+ *
+ * @selector: The format specifier character
+ * @prnt: A function pointer to the printing function for the specifier
+ */
+typedef struct print
+{
+	char *selector;
+	void (*prnt)(va_list args);
+} print_t;
+
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
