@@ -82,7 +82,7 @@ void print_all(const char * const format, ...)
 	
 	while (format && (*(format + cont)))
 	{
-		int cont1 = 0, cont2 = 0;
+		int cont2 = 0;
 
 		while (cont2 < 4 && format[cont] != *funcs[cont2].selector)
 		{
