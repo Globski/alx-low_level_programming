@@ -79,10 +79,10 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(args, format);
-
-	for (cont = 0; format && format[cont]; cont++)
+	
+	while (format && (*(format + cont)))
 	{
-		int cont2 = 0;
+		int cont1 = 0, cont2 = 0;
 
 		while (cont2 < 4 && format[cont] != *funcs[cont2].selector)
 		{
@@ -95,6 +95,7 @@ void print_all(const char * const format, ...)
 			funcs[cont2].prnt(args);
 			separator = ", ";
 		}
+		cont++;
 	}
 
 	printf("\n");
