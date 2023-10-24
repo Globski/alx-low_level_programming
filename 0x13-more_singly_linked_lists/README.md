@@ -54,4 +54,4 @@ You can run the compiled programs by executing the corresponding executable. For
 
 
 ## Author
-[Ogunsemore Gloria](./globski)
+[Ogunsemore Gloria](https://github.com/Globski)
