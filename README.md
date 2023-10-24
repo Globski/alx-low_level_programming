@@ -23,6 +23,7 @@ This repository contains a collection of C programming projects covering various
 | [0x10-variadic_functions](./0x10-variadic_functions) | Dive into variadic functions and learn how to work with functions that accept a variable number of arguments. |
 | [0x11-printf](./printf) |  Implement a custom printf function in C that replicates the behavior of the standard library printf. This project focuses on handling various format specifiers, advanced features, and optimizing buffer usage for efficient printing. |
 | [0x12-singly_linked_lists](./0x12-singly_linked_lists) | Learn about singly linked lists and associated operations, including creating, adding, and freeing nodes. This project helps you understand data structures and memory management. |
+| [0x13-more_singly_linked_lists](./0x13-more_singly_linked_lists) | Explore more advanced operations on singly linked lists to further enhance your data structure and algorithm skills. |
 
 Feel free to explore each project's directory for more details, source code, and resources.
 
