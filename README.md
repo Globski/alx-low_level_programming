@@ -24,6 +24,7 @@ This repository contains a collection of C programming projects covering various
 | [0x11-printf](./printf) |  Implement a custom printf function in C that replicates the behavior of the standard library printf. This project focuses on handling various format specifiers, advanced features, and optimizing buffer usage for efficient printing. |
 | [0x12-singly_linked_lists](./0x12-singly_linked_lists) | Learn about singly linked lists and associated operations, including creating, adding, and freeing nodes. This project helps you understand data structures and memory management. |
 | [0x13-more_singly_linked_lists](./0x13-more_singly_linked_lists) | Explore more advanced operations on singly linked lists to further enhance your data structure and algorithm skills. |
+| [0x14-bit_manipulation](./0x14-bit_manipulation)	| This project focuses on bit manipulation in C, including tasks like binary to unsigned int conversion, binary printing, working with bits, and endianness checking.|
 
 Feel free to explore each project's directory for more details, source code, and resources.
 
