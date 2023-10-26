@@ -3,14 +3,14 @@ This repository contains a collection of C programming projects related to bit m
 
 | Project | Description | Source Code |
 | ------- | ----------- | ----------- |
-| **0. Binary to Unsigned Int** | Convert a binary number to an unsigned int. | [0-binary_to_uint.c](0x14-bit_manipulation/0-binary_to_uint.c) |
-| **1. Print Binary** | Print the binary representation of a number without using arrays or malloc. | [1-print_binary.c](0x14-bit_manipulation/1-print_binary.c) |
-| **2. Get Bit** | Get the value of a bit at a given index. | [2-get_bit.c](0x14-bit_manipulation/2-get_bit.c) |
-| **3. Set Bit** | Set the value of a bit to 1 at a given index. | [3-set_bit.c](0x14-bit_manipulation/3-set_bit.c) |
-| **4. Clear Bit** | Set the value of a bit to 0 at a given index. | [4-clear_bit.c](0x14-bit_manipulation/4-clear_bit.c) |
-| **5. Flip Bits** | Calculate the number of bits needed to flip to get from one number to another. | [5-flip_bits.c](0x14-bit_manipulation/5-flip_bits.c) |
-| **6. Endianness** | Check the endianness of the system (big endian or little endian). | [100-get_endianness.c](0x14-bit_manipulation/100-get_endianness.c) |
-| **7. Crackme3** | Find the password for a given program and save it in a file. | [101-password](0x14-bit_manipulation/101-password) |
+| **0. Binary to Unsigned Int** | Convert a binary number to an unsigned int. | [0-binary_to_uint.c](./0-binary_to_uint.c) |
+| **1. Print Binary** | Print the binary representation of a number without using arrays or malloc. | [1-print_binary.c](./1-print_binary.c) |
+| **2. Get Bit** | Get the value of a bit at a given index. | [2-get_bit.c](./2-get_bit.c) |
+| **3. Set Bit** | Set the value of a bit to 1 at a given index. | [3-set_bit.c](./3-set_bit.c) |
+| **4. Clear Bit** | Set the value of a bit to 0 at a given index. | [4-clear_bit.c](./4-clear_bit.c) |
+| **5. Flip Bits** | Calculate the number of bits needed to flip to get from one number to another. | [5-flip_bits.c](./5-flip_bits.c) |
+| **6. Endianness** | Check the endianness of the system (big endian or little endian). | [100-get_endianness.c](./100-get_endianness.c) |
+| **7. Crackme3** | Find the password for a given program and save it in a file. | [101-password](./101-password) |
 
 ## Tasks Description
 1. Convert Binary to Unsigned Int - Convert a binary number represented as a string to an unsigned int. The function handles invalid characters and NULL input.
