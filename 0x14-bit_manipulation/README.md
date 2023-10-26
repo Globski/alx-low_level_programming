@@ -12,14 +12,6 @@ This repository contains a collection of C programming projects related to bit m
 | **6. Endianness** | Check the endianness of the system (big endian or little endian). | [100-get_endianness.c](0x14-bit_manipulation/100-get_endianness.c) |
 | **7. Crackme3** | Find the password for a given program and save it in a file. | [101-password](0x14-bit_manipulation/101-password) |
 
-## How to Compile and Run
-For each project, you can compile the provided main file with the source code. For example:
-
-```sh
-gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-binary_to_uint.c -o 0-binary_to_uint
-./0-binary_to_uint
-```
-
 ## Tasks Description
 1. Convert Binary to Unsigned Int - Convert a binary number represented as a string to an unsigned int. The function handles invalid characters and NULL input.
 
@@ -36,4 +28,13 @@ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-binary_to_uint.c -o 0-
 7. Endianness - Determine the endianness of the system, returning 0 for big-endian and 1 for little-endian.
 
 8. Crackme3 - Find and save the password for a given program in the 101-password file.
+
+
+## How to Compile and Run
+For each project, you can compile the provided main file with the source code. For example:
+
+```sh
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 0-main.c 0-binary_to_uint.c -o 0-binary_to_uint
+./0-binary_to_uint
+```
 
