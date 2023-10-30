@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFSIZE];
 
 	if (argc != 3)
-		print_error(97, "Usage: cp file_from file_to", NULL);
+		print_error(97, "Usage: cp file_from file_to");
 
 	fileDesc_from = open(argv[1], O_RDONLY);
 	if (fileDesc_from == -1)
