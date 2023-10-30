@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 		{
 			close(fileDesc_from);
 			close(fileDesc_to);
-			print_error(99, "Error: Can't write to file", argv[2]);
+			print_error(99, "Error: Can't write to", argv[2]);
 		}
 	}
 
