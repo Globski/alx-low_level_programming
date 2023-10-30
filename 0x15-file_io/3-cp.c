@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 		close(fileDesc_from);
 		close(fileDesc_to);
 		print_error(98, "Error: Can't read from file", argv[1]);
-
+	}
 	close_files(fileDesc_from, fileDesc_to);
 
 	return (0);
