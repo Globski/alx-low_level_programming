@@ -62,18 +62,25 @@ int main(int argc, char *argv[])
 
 	fileDesc_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fileDesc_to == -1)
+	{
+		close(fileDesc_from);
 		print_error(99, "Error: Can't write to file", argv[2]);
-
+	}
 	while ((bytesRead = read(fileDesc_from, buffer, BUFSIZE)) > 0)
 	{
 		bytesWritten = write(fileDesc_to, buffer, bytesRead);
 		if (bytesWritten == -1 || bytesWritten != bytesRead)
 		{
+			close(fileDesc_from);
+			close(fileDesc_to);
 			print_error(99, "Error: Can't write to file", argv[2]);
 		}
 	}
 
 	if (bytesRead == -1)
+	{
+		close(fileDesc_from);
+		close(fileDesc_to);
 		print_error(98, "Error: Can't read from file", argv[1]);
 
 	close_files(fileDesc_from, fileDesc_to);
