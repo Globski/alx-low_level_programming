@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	if (fileDesc_to == -1)
 	{
 		close(fileDesc_from);
-		print_error(99, "Error: Can't write to file", argv[2]);
+		print_error(99, "Error: Can't write to", argv[2]);
 	}
 	while ((bytesRead = read(fileDesc_from, buffer, BUFSIZE)) > 0)
 	{
