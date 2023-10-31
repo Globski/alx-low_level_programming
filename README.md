@@ -25,6 +25,7 @@ This repository contains a collection of C programming projects covering various
 | [0x12-singly_linked_lists](./0x12-singly_linked_lists) | Learn about singly linked lists and associated operations, including creating, adding, and freeing nodes. This project helps you understand data structures and memory management. |
 | [0x13-more_singly_linked_lists](./0x13-more_singly_linked_lists) | Explore more advanced operations on singly linked lists to further enhance your data structure and algorithm skills. |
 | [0x14-bit_manipulation](./0x14-bit_manipulation)	| This project focuses on bit manipulation in C, including tasks like binary to unsigned int conversion, binary printing, working with bits, and endianness checking.|
+| [0x15-file_io](./0x15-file_io) | Focus on file input and output operations in C, covering file reading and writing, file descriptors, and handling different file types |
 
 Feel free to explore each project's directory for more details, source code, and resources.
 
