@@ -80,7 +80,7 @@ switch (osabi)
 
 const char *get_type(uint16_t type)
 {
-switch (header->e_type)
+switch (type)
 	{
         	case ET_NONE:
             		return("NONE (None)");
