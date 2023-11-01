@@ -14,6 +14,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <errno.h>
+#include <elf.h>
 
 #define BUFSIZE 1024
 
