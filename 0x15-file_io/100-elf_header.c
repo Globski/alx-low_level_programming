@@ -20,9 +20,11 @@ void print_error(int code, const char *message)
  */
 void print_elf_header(Elf64_Ehdr *header)
 {
+	int i;
+
 	printf("ELF Header:\n");
 	printf("  Magic:   ");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", header->e_ident[i]);
 	}
