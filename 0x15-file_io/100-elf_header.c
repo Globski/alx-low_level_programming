@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_elf_error - prints an error message to
+ * print_error - prints an error message to
  * stderr and exits with the given code
  *
  * @code: the exit code
  * @message: the error message
  */
-void print_elf_error(int code, const char *message)
+void print_error(int code, const char *message)
 {
 	dprintf(STDERR_FILENO, "%s\n", message);
 	exit(code);
@@ -20,18 +20,13 @@ void print_elf_error(int code, const char *message)
  */
 void print_elf_header(Elf64_Ehdr *header)
 {
-	int i;
-
 	printf("ELF Header:\n");
 	printf("  Magic:   ");
-	for (i = 0; i < EI_NIDENT; i++)
+	for (int i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x ", header->e_ident[i]);
-		if (i < EI_NIDENT - 1)
-            		printf(" ");
-        	else
-            		printf("\n");
 	}
+	printf("\n");
 	printf("  Class:                             ELF%d\n",
 			header->e_ident[EI_CLASS] == ELFCLASS64 ? 64 : 32);
 	printf("  Data:                              %s\n",
@@ -40,77 +35,17 @@ void print_elf_header(Elf64_Ehdr *header)
 	printf("  Version:                           %d (current)\n",
 			header->e_ident[EI_VERSION]);
 	printf("  OS/ABI:                            %s\n",
-			get_osabi(header->e_ident[EI_OSABI]));
+			header->e_ident[EI_OSABI] == ELFOSABI_SYSV ?
+			"UNIX - System V" : " <unknown>");
 	printf("  ABI Version:                       %d\n",
 			header->e_ident[EI_ABIVERSION]);
 	printf("  Type:                              %s\n",
-			get_type(header->e_type));
+			header->e_type == ET_EXEC ?
+			"EXEC (Executable file)" : " <unknown>");
 	printf("  Entry point address:               0x%lx\n",
 			(unsigned long)header->e_entry);
 }
 
-const char *get_osabi(uint8_t osabi)
-{
-	switch (osabi)
-	{
-		case ELFOSABI_SYSV:
-            		printf("UNIX - System V\n");
-            		break;
-		case ELFOSABI_HPUX:
-            		printf("UNIX - HP-UX\n");
-            		break;
-        	case ELFOSABI_NETBSD:
-            		printf("UNIX - NetBSD\n");
-            		break;
-        	case ELFOSABI_LINUX:
-            		printf("UNIX - Linux\n");
-            		break;
-        	case ELFOSABI_SOLARIS:
-            		printf("UNIX - Solaris\n");
-            		break;
-        	case ELFOSABI_IRIX:
-            		printf("UNIX - IRIX\n");
-            		break;
-        	case ELFOSABI_FREEBSD:
-            		printf("UNIX - FreeBSD\n");
-            		break;
-        	case ELFOSABI_TRU64:
-            		printf("UNIX - TRU64\n");
-            		break;
-        	case ELFOSABI_ARM:
-            		printf("ARM\n");
-            		break;
-        	case ELFOSABI_STANDALONE:
-            		printf("Standalone App\n");
-            		break;
-        	default:
-            		printf("<unknown: \n");
-    	}
-}
-
-const char *get_type(uint16_t type)
-{
-switch (type)
-	{
-        	case ET_NONE:
-            		printf("NONE (None)\n");
-            		break;
-        	case ET_REL:
-            		printf("REL (Relocatable file)\n");
-            		break;
-        	case ET_EXEC:
-            		printf("EXEC (Executable file)\n");
-            		break;
-        	case ET_DYN:
-            		printf("DYN (Shared object file)\n");
-            		break;
-        	case ET_CORE:
-            		printf("CORE (Core file)\n");
-            		break;
-        	default:
-            		printf("<unknown: \n");
-    	}
-}
 /**
  * main - Entry point of the ELF header information display program
  * @argc: The number of command-line arguments
@@ -124,23 +59,23 @@ int main(int argc, char *argv[])
 	Elf64_Ehdr header;
 
 	if (argc != 2)
-		print_elf_error(98, "Usage: elf_header elf_filename");
+		print_error(98, "Usage: elf_header elf_filename");
 
 	fileDesc = open(argv[1], O_RDONLY);
 
 	if (fileDesc == -1)
-		print_elf_error(98, "Error: Can't open file");
+		print_error(98, "Error: Can't open file");
 
 	if (lseek(fileDesc, 0, SEEK_SET) == -1)
 	{
 		close(fileDesc);
-		print_elf_error(98, "Error: Can't seek to the start of the file");
+		print_error(98, "Error: Can't seek to the start of the file");
 	}
 
 	if (read(fileDesc, &header, sizeof(header)) != sizeof(header))
 	{
 		close(fileDesc);
-		print_elf_error(98, "Error: Can't read ELF header");
+		print_error(98, "Error: Can't read ELF header");
 	}
 
 	if (header.e_ident[EI_MAG0] != ELFMAG0 ||
@@ -149,7 +84,7 @@ int main(int argc, char *argv[])
 			header.e_ident[EI_MAG3] != ELFMAG3)
 	{
 		close(fileDesc);
-		print_elf_error(98, "Error: Not an ELF file");
+		print_error(98, "Error: Not an ELF file");
 	}
 
 	print_elf_header(&header);
