@@ -39,69 +39,61 @@ void print_elf_header(Elf64_Ehdr *header)
 			"2's complement, little endian" : "2's complement, big endian");
 	printf("  Version:                           %d (current)\n",
 			header->e_ident[EI_VERSION]);
-	printf("  OS/ABI:                            ");
-	switch (header->e_ident[EI_OSABI])
-	{
-        	case ELFOSABI_SYSV:
-            		printf("UNIX - System V\n");
-            		break;
-		case ELFOSABI_HPUX:
-            		printf("UNIX - HP-UX\n");
-            		break;
-        	case ELFOSABI_NETBSD:
-            		printf("UNIX - NetBSD\n");
-            		break;
-        	case ELFOSABI_LINUX:
-            		printf("UNIX - Linux\n");
-            		break;
-        	case ELFOSABI_SOLARIS:
-            		printf("UNIX - Solaris\n");
-            		break;
-        	case ELFOSABI_IRIX:
-            		printf("UNIX - IRIX\n");
-            		break;
-        	case ELFOSABI_FREEBSD:
-            		printf("UNIX - FreeBSD\n");
-            		break;
-        	case ELFOSABI_TRU64:
-            		printf("UNIX - TRU64\n");
-            		break;
-        	case ELFOSABI_ARM:
-            		printf("ARM\n");
-            		break;
-        	case ELFOSABI_STANDALONE:
-            		printf("Standalone App\n");
-            		break;
-        	default:
-            		printf("<unknown: %x>\n", header->e_ident[EI_OSABI]);
-    	}
+	printf("  OS/ABI:                            %s\n",
+			get_osabi(header->e_ident[EI_OSABI]));
 	printf("  ABI Version:                       %d\n",
 			header->e_ident[EI_ABIVERSION]);
-	printf("  Type:                              ");
-	switch (header->e_type)
-	{
-        	case ET_NONE:
-            		printf("NONE (None)\n");
-            		break;
-        	case ET_REL:
-            		printf("REL (Relocatable file)\n");
-            		break;
-        	case ET_EXEC:
-            		printf("EXEC (Executable file)\n");
-            		break;
-        	case ET_DYN:
-            		printf("DYN (Shared object file)\n");
-            		break;
-        	case ET_CORE:
-            		printf("CORE (Core file)\n");
-            		break;
-        	default:
-            		printf("<unknown: %x>\n", header->e_type);
-    	}
+	printf("  Type:                              %s\n",
+			get_type(header->e_type));
 	printf("  Entry point address:               0x%lx\n",
 			(unsigned long)header->e_entry);
 }
 
+const char *get_osabi(uint8_t osabi)
+{
+switch (osabi)
+	{
+        	case ELFOSABI_SYSV:
+            		return("UNIX - System");
+		case ELFOSABI_HPUX:
+            		return("UNIX - HP-UX");
+        	case ELFOSABI_NETBSD:
+            		return("UNIX - NetBSD");
+        	case ELFOSABI_LINUX:
+            		return("UNIX - Linux");
+        	case ELFOSABI_SOLARIS:
+            		return("UNIX - Solaris");
+        	case ELFOSABI_IRIX:
+            		return("UNIX - IRIX");
+        	case ELFOSABI_FREEBSD:
+            		return("UNIX - FreeBSD");
+        	case ELFOSABI_TRU64:
+            		return("UNIX - TRU64")
+        	case ELFOSABI_ARM:
+            		return("ARM");
+        	case ELFOSABI_STANDALONE:
+            		return("Standalone App");
+        	default:
+            		return("<unknown>");
+    	}
+
+const char *get_type(uint16_t type)
+{
+switch (header->e_type)
+	{
+        	case ET_NONE:
+            		return("NONE (None)");
+        	case ET_REL:
+            		return("REL (Relocatable file)");
+        	case ET_EXEC:
+            		return("EXEC (Executable file)");
+        	case ET_DYN:
+            		return("DYN (Shared object file)");
+        	case ET_CORE:
+            		return("CORE (Core file)");
+        	default:
+            		return("<unknown>");
+    	}
 /**
  * main - Entry point of the ELF header information display program
  * @argc: The number of command-line arguments
