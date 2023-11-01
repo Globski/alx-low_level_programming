@@ -68,7 +68,7 @@ switch (osabi)
         	case ELFOSABI_FREEBSD:
             		return("UNIX - FreeBSD");
         	case ELFOSABI_TRU64:
-            		return("UNIX - TRU64")
+            		return("UNIX - TRU64");
         	case ELFOSABI_ARM:
             		return("ARM");
         	case ELFOSABI_STANDALONE:
@@ -76,6 +76,7 @@ switch (osabi)
         	default:
             		return("<unknown>");
     	}
+}
 
 const char *get_type(uint16_t type)
 {
@@ -94,6 +95,7 @@ switch (header->e_type)
         	default:
             		return("<unknown>");
     	}
+}
 /**
  * main - Entry point of the ELF header information display program
  * @argc: The number of command-line arguments
