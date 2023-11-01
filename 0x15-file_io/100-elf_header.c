@@ -98,8 +98,8 @@ void print_elf_header(Elf64_Ehdr *header)
         	default:
             		printf("<unknown: %x>\n", header->e_type);
     	}
-	printf("  Entry point address:               0x%llx\n",
-			(unsigned long long)header->e_entry);
+	printf("  Entry point address:               0x%lx\n",
+			(unsigned long)header->e_entry);
 }
 
 /**
