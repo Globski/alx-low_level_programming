@@ -23,5 +23,7 @@ int create_file(const char *filename, char *text_content);
 int append_text_to_file(const char *filename, char *text_content);
 void print_error(int code, const char *message, const char *file);
 void close_files(int fileDesc_from, int fileDesc_to);
+void print_error(int code, const char *message);
+void print_elf_header(Elf64_Ehdr *header);
 
 #endif /* MAIN_H */
