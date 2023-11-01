@@ -30,7 +30,7 @@ void print_elf_header(Elf64_Ehdr *header)
 		if (i < EI_NIDENT - 1)
             		printf(" ");
         	else
-            		printf("\n")
+            		printf("\n");
 	}
 	printf("  Class:                             ELF%d\n",
 			header->e_ident[EI_CLASS] == ELFCLASS64 ? 64 : 32);
