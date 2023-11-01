@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
 	char buffer[BUFSIZE];
 
 	if (argc != 3)
-		print_error(97, "Usage: cp fileFrom fileTo", NULL);
+		print_error(97, "Usage: cp file_from file_to", NULL);
 
 	fileDesc_from = open(argv[1], O_RDONLY);
 	if (fileDesc_from == -1)
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 	if (fileDesc_to == -1)
 	{
 		close(fileDesc_from);
-		print_error(99, "Error: Can't write to file", argv[2]);
+		print_error(99, "Error: Can't write to", argv[2]);
 	}
 	while ((bytesRead = read(fileDesc_from, buffer, BUFSIZE)) > 0)
 	{
@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 		{
 			close(fileDesc_from);
 			close(fileDesc_to);
-			print_error(99, "Error: Can't write to file", argv[2]);
+			print_error(99, "Error: Can't write to", argv[2]);
 		}
 	}
 

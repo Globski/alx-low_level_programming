@@ -5,11 +5,11 @@ This repository contains C programs for various file I/O operations. Each task i
 
 | Task                             | Description                                                        | Filename                        | Source Code          |
 | -------------------------------- | ------------------------------------------------------------------ | ----------------------------      | -------------------------          |
-| 0. Tread lightly, she is near     | Read a text file and print its content to the standard output.   | 0-read_textfile.c                 | [Source Code](https://github.com/username/alx-low_level_programming/blob/master/0x15-file_io/0-read_textfile.c) |
-| 1. Under the snow                 | Create a file with specified permissions and write content to it. | 1-create_file.c                   | [Source Code](https://github.com/username/alx-low_level_programming/blob/master/0x15-file_io/1-create_file.c) |
-| 2. Speak gently, she can hear    | Append text to the end of an existing file.                       | 2-append_text_to_file.c            | [Source Code](https://github.com/username/alx-low_level_programming/blob/master/0x15-file_io/2-append_text_to_file.c) |
-| 3. cp                            | Copy the content of one file to another, with error handling.     | 3-cp.c                           | [Source Code](https://github.com/username/alx-low_level_programming/blob/master/0x15-file_io/3-cp.c) |
-| 4. elf                           | Display information from the ELF header of an ELF file.           | 100-elf_header.c                  | [Source Code](https://github.com/username/alx-low_level_programming/blob/master/0x15-file_io/100-elf_header.c) |
+| 0. Tread lightly, she is near     | Read a text file and print its content to the standard output.   | 0-read_textfile.c                 | [Source Code](./0-read_textfile.c) |
+| 1. Under the snow                 | Create a file with specified permissions and write content to it. | 1-create_file.c                   | [Source Code](./1-create_file.c) |
+| 2. Speak gently, she can hear    | Append text to the end of an existing file.                       | 2-append_text_to_file.c            | [Source Code](./2-append_text_to_file.c) |
+| 3. cp                            | Copy the content of one file to another, with error handling.     | 3-cp.c                           | [Source Code](./3-cp.c) |
+| 4. elf                           | Display information from the ELF header of an ELF file.           | 100-elf_header.c                  | [Source Code](./100-elf_header.c) |
 
 ## Usage
 
