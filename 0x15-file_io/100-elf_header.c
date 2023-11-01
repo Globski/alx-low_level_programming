@@ -68,12 +68,6 @@ int main(int argc, char *argv[])
 	if (fileDesc == -1)
 		print_elf_error(98, "Error: Can't open file");
 
-	if (lseek(fileDesc, 0, SEEK_SET) == -1)
-	{
-		close(fileDesc);
-		print_elf_error(98, "Error: Can't seek to the start of the file");
-	}
-
 	if (read(fileDesc, &header, sizeof(header)) != sizeof(header))
 	{
 		close(fileDesc);
