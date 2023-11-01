@@ -7,7 +7,7 @@
  * @code: the exit code
  * @message: the error message
  */
-void print_error(int code, const char *message)
+void print_elf_error(int code, const char *message)
 {
 	dprintf(STDERR_FILENO, "%s\n", message);
 	exit(code);
@@ -61,23 +61,23 @@ int main(int argc, char *argv[])
 	Elf64_Ehdr header;
 
 	if (argc != 2)
-		print_error(98, "Usage: elf_header elf_filename");
+		print_elf_error(98, "Usage: elf_header elf_filename");
 
 	fileDesc = open(argv[1], O_RDONLY);
 
 	if (fileDesc == -1)
-		print_error(98, "Error: Can't open file");
+		print_elf_error(98, "Error: Can't open file");
 
 	if (lseek(fileDesc, 0, SEEK_SET) == -1)
 	{
 		close(fileDesc);
-		print_error(98, "Error: Can't seek to the start of the file");
+		print_elf_error(98, "Error: Can't seek to the start of the file");
 	}
 
 	if (read(fileDesc, &header, sizeof(header)) != sizeof(header))
 	{
 		close(fileDesc);
-		print_error(98, "Error: Can't read ELF header");
+		print_elf_error(98, "Error: Can't read ELF header");
 	}
 
 	if (header.e_ident[EI_MAG0] != ELFMAG0 ||
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
 			header.e_ident[EI_MAG3] != ELFMAG3)
 	{
 		close(fileDesc);
-		print_error(98, "Error: Not an ELF file");
+		print_elf_error(98, "Error: Not an ELF file");
 	}
 
 	print_elf_header(&header);
