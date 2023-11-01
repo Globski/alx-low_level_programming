@@ -25,5 +25,7 @@ void print_error(int code, const char *message, const char *file);
 void close_files(int fileDesc_from, int fileDesc_to);
 void print_elf_error(int code, const char *message);
 void print_elf_header(Elf64_Ehdr *header);
+const char *get_osabi(uint8_t osabi);
+const char *get_type(uint16_t type);
 
 #endif /* MAIN_H */
