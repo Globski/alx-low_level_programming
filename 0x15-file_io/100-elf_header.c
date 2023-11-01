@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_error - prints an error message to
+ * print_elf_error - prints an error message to
  * stderr and exits with the given code
  *
  * @code: the exit code
