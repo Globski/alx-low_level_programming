@@ -84,7 +84,7 @@ const char *get_osabi(uint8_t osabi)
             		printf("Standalone App\n");
             		break;
         	default:
-            		printf("<unknown: %x>\n", header->e_ident[EI_OSABI]);
+            		printf("<unknown: %x>\n");
     	}
 }
 
@@ -108,7 +108,7 @@ switch (type)
             		printf("CORE (Core file)\n");
             		break;
         	default:
-            		printf("<unknown: %x>\n", header->e_type);
+            		printf("<unknown: %x>\n");
     	}
 }
 /**
