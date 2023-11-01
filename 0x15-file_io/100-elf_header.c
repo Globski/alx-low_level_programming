@@ -36,7 +36,7 @@ void print_elf_header(Elf64_Ehdr *header)
 			"2's complement, little endian" : "2's complement, big endian");
 	printf("  Version:                           %d (current)\n",
 			header->e_ident[EI_VERSION]);
-	printf("  OS/ABI:                            ")
+	printf("  OS/ABI:                            ");
 	switch (header->e_ident[EI_OSABI])
 	{
         	case ELFOSABI_SYSV:
@@ -74,7 +74,7 @@ void print_elf_header(Elf64_Ehdr *header)
     	}
 	printf("  ABI Version:                       %d\n",
 			header->e_ident[EI_ABIVERSION]);
-	printf("  Type:                              ")
+	printf("  Type:                              ");
 	switch (header->e_type)
 	{
         	case ET_NONE:
@@ -122,7 +122,7 @@ int main(int argc, char *argv[])
 	if (lseek(fileDesc, 0, SEEK_SET) == -1)
 	{
 		close(fileDesc);
-		print_error(98, "Error: Can't seek to the start of the file");
+		print_elf_error(98, "Error: Can't seek to the start of the file");
 	}
 
 	if (read(fileDesc, &header, sizeof(header)) != sizeof(header))
