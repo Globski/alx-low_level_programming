@@ -51,30 +51,40 @@ void print_elf_header(Elf64_Ehdr *header)
 
 const char *get_osabi(uint8_t osabi)
 {
-switch (osabi)
+	switch (osabi)
 	{
-        	case ELFOSABI_SYSV:
-            		return("UNIX - System");
+		case ELFOSABI_SYSV:
+            		printf("UNIX - System V\n");
+            		break;
 		case ELFOSABI_HPUX:
-            		return("UNIX - HP-UX");
+            		printf("UNIX - HP-UX\n");
+            		break;
         	case ELFOSABI_NETBSD:
-            		return("UNIX - NetBSD");
+            		printf("UNIX - NetBSD\n");
+            		break;
         	case ELFOSABI_LINUX:
-            		return("UNIX - Linux");
+            		printf("UNIX - Linux\n");
+            		break;
         	case ELFOSABI_SOLARIS:
-            		return("UNIX - Solaris");
+            		printf("UNIX - Solaris\n");
+            		break;
         	case ELFOSABI_IRIX:
-            		return("UNIX - IRIX");
+            		printf("UNIX - IRIX\n");
+            		break;
         	case ELFOSABI_FREEBSD:
-            		return("UNIX - FreeBSD");
+            		printf("UNIX - FreeBSD\n");
+            		break;
         	case ELFOSABI_TRU64:
-            		return("UNIX - TRU64");
+            		printf("UNIX - TRU64\n");
+            		break;
         	case ELFOSABI_ARM:
-            		return("ARM");
+            		printf("ARM\n");
+            		break;
         	case ELFOSABI_STANDALONE:
-            		return("Standalone App");
+            		printf("Standalone App\n");
+            		break;
         	default:
-            		return("<unknown>");
+            		printf("<unknown: %x>\n", header->e_ident[EI_OSABI]);
     	}
 }
 
@@ -83,17 +93,22 @@ const char *get_type(uint16_t type)
 switch (type)
 	{
         	case ET_NONE:
-            		return("NONE (None)");
+            		printf("NONE (None)\n");
+            		break;
         	case ET_REL:
-            		return("REL (Relocatable file)");
+            		printf("REL (Relocatable file)\n");
+            		break;
         	case ET_EXEC:
-            		return("EXEC (Executable file)");
+            		printf("EXEC (Executable file)\n");
+            		break;
         	case ET_DYN:
-            		return("DYN (Shared object file)");
+            		printf("DYN (Shared object file)\n");
+            		break;
         	case ET_CORE:
-            		return("CORE (Core file)");
+            		printf("CORE (Core file)\n");
+            		break;
         	default:
-            		return("<unknown>");
+            		printf("<unknown: %x>\n", header->e_type);
     	}
 }
 /**
