@@ -234,6 +234,31 @@ guillaume@ubuntu:~/0x1C$
 Develop a Makefile named 100-Makefile with the following enhanced functionalities:
 
 - Similar to Task 3 and Task 4 but with additional constraints and improvements.
+
+**Name of the Executable and Rules:**
+   - Name of the executable: `school`
+   - Rules: `all`, `clean`, `fclean`, `oclean`, `re`
+
+**Functionality of Rules:**
+   - `all`: Builds the executable `school`.
+   - `clean`: Deletes all Emacs and Vim temporary files along with the executable.
+   - `oclean`: Deletes the object files.
+   - `fclean`: Deletes all Emacs and Vim temporary files, the executable, and the object files.
+   - `re`: Forces recompilation of all source files.
+
+**Variables:**
+   - `CC`: Specifies the compiler to be used.
+   - `SRC`: Specifies the .c files.
+   - `OBJ`: Specifies the .o files.
+   - `NAME`: Specifies the name of the executable.
+   - `RM`: Specifies the program to delete files.
+   - `CFLAGS`: Specifies compiler flags: `-Wall -Werror -Wextra -pedantic`
+
+**Additional Constraints and Improvements:**
+   - The `all` rule should recompile only the updated source files.
+   - The cleaning rules (`clean`, `oclean`, `fclean`, `re`) should never fail.
+   - Do not have a list of all the .o files.
+
 ```python
 make -f 100-Makefile
 ```
