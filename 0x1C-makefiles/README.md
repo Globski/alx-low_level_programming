@@ -37,7 +37,7 @@ Create a Makefile named 0-Makefile that does the following:
 - The all rule should compile the C files main.c and school.c into an executable named school.
 When executed, it should produce the output as shown in the example.
 variables: none
-```
+```python
 julien@ubuntu:~/0x1C. Makefiles$ make -f 0-Makefile 
 gcc main.c school.c -o school
 julien@ubuntu:~/0x1C. Makefiles$ ./school 
@@ -77,7 +77,7 @@ Create a Makefile named 1-Makefile that fulfills the following requirements:
 - The variable SRC should specify the .c files to be compiled.
 - Implements a rule named all that builds the executable school using the variables CC and SRC.
 
-```
+```python
 julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
 gcc main.c school.c -o school
 julien@ubuntu:~/0x1C. Makefiles$ make -f 1-Makefile
@@ -96,7 +96,7 @@ Develop a Makefile named 2-Makefile with the following features:
 - Implements a rule named all that builds the executable school.
 - The all rule should recompile only the updated source files.
 
-```
+```python
 julien@ubuntu:~/0x1C. Makefiles$ make -f 2-Makefile
 gcc    -c -o main.o main.c
 gcc    -c -o school.o school.c
@@ -122,7 +122,7 @@ Develop a Makefile named 3-Makefile with the following functionalities:
 - The re rule forces recompilation of all source files.
 - The cleaning rules should never fail.
 
-```
+```python
 julien@ubuntu:~//0x1C. Makefiles$ ls -1
 0-Makefile
 1-Makefile
@@ -185,18 +185,83 @@ Develop a Makefile named 4-Makefile that includes the following features:
 - The all rule builds the executable school.
 - The cleaning rules should never fail.
 
-```
+```python
 julien@ubuntu:~/0x1C. Makefiles$ make all -f 4-Makefile
 gcc -Wall -Werror -Wextra -pedantic   -c -o main.o main.c
 gcc -Wall -Werror -Wextra -pedantic   -c -o school.o school.c
 gcc main.o school.o -o school
 julien@ubuntu:~/0x1C. Makefiles$
 ```
+### Implement Island Perimeter Function (Task 5)
+Create a Python script named `5-island_perimeter.py` that implements a function to calculate the perimeter of an island described in a grid.
+
+- The function `island_perimeter(grid)` should return the perimeter of the island.
+- The grid is represented as a list of lists of integers, where:
+  - `0` represents a water zone
+  - `1` represents a land zone
+- Each cell is a square with side length 1.
+- Grid cells are connected horizontally/vertically (not diagonally).
+- The grid is rectangular, with width and height not exceeding 100.
+- The grid is completely surrounded by water, and there is only one island (or nothing).
+- The island doesn’t have any "lakes" (water inside that isn’t connected to the water around the island).
+
+Example:
+```python
+guillaume@ubuntu:~/0x1C$ cat 5-main.py
+#!/usr/bin/python3
+"""
+5-main
+"""
+island_perimeter = __import__('5-island_perimeter').island_perimeter
+
+if __name__ == "__main__":
+    grid = [
+        [0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 0, 0, 0, 0],
+        [0, 1, 1, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0]
+    ]
+    print(island_perimeter(grid))
+
+guillaume@ubuntu:~/0x1C$ 
+guillaume@ubuntu:~/0x1C$ ./5-main.py
+12
+guillaume@ubuntu:~/0x1C$ 
+```
 
 ### Advanced Makefile with Enhanced Functionality (Task 6)
 Develop a Makefile named 100-Makefile with the following enhanced functionalities:
 
 - Similar to Task 3 and Task 4 but with additional constraints and improvements.
+
+**Name of the Executable and Rules:**
+   - Name of the executable: `school`
+   - Rules: `all`, `clean`, `fclean`, `oclean`, `re`
+
+**Functionality of Rules:**
+   - `all`: Builds the executable `school`.
+   - `clean`: Deletes all Emacs and Vim temporary files along with the executable.
+   - `oclean`: Deletes the object files.
+   - `fclean`: Deletes all Emacs and Vim temporary files, the executable, and the object files.
+   - `re`: Forces recompilation of all source files.
+
+**Variables:**
+   - `CC`: Specifies the compiler to be used.
+   - `SRC`: Specifies the .c files.
+   - `OBJ`: Specifies the .o files.
+   - `NAME`: Specifies the name of the executable.
+   - `RM`: Specifies the program to delete files.
+   - `CFLAGS`: Specifies compiler flags: `-Wall -Werror -Wextra -pedantic`
+
+**Additional Constraints and Improvements:**
+   - The `all` rule should recompile only the updated source files.
+   - The cleaning rules (`clean`, `oclean`, `fclean`, `re`) should never fail.
+   - Do not have a list of all the .o files.
+
+```python
+make -f 100-Makefile
+```
 
 ## How to Use:
 1. Clone the repository from [alx-low_level_programming](https://github.com/alx-low_level_programming).
