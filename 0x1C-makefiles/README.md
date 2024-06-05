@@ -6,13 +6,13 @@ This project focuses on understanding Makefiles in C programming. It covers crea
 ## Project Structure:
 | Task                     | Description                                              | Source Code                                                   |
 |--------------------------|----------------------------------------------------------|---------------------------------------------------------------|
-| 0-Makefile               | Create your first Makefile.                              | [0-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/0-Makefile)               |
-| 1-Makefile               | Create a Makefile with variables.                        | [1-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/1-Makefile)               |
-| 2-Makefile               | Create a useful Makefile with dependencies.              | [2-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/2-Makefile)               |
-| 3-Makefile               | Create a Makefile with additional rules and cleaning.     | [3-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/3-Makefile)               |
-| 4-Makefile               | Implement a complete Makefile with compiler flags.       | [4-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/4-Makefile)               |
+| 0-Makefile               | Create your first Makefile.                              | [0-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/0-Makefile)               |
+| 1-Makefile               | Create a Makefile with variables.                        | [1-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/1-Makefile)               |
+| 2-Makefile               | Create a useful Makefile with dependencies.              | [2-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/2-Makefile)               |
+| 3-Makefile               | Create a Makefile with additional rules and cleaning.     | [3-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/3-Makefile)               |
+| 4-Makefile               | Implement a complete Makefile with compiler flags.       | [4-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/4-Makefile)               |
 | 5-island_perimeter.py    | Implement a function to calculate island perimeter.       | [5-island_perimeter.py](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/5-island_perimeter.py) |
-| 100-Makefile             | Advanced Makefile implementation with specific rules.    | [100-Makefile](https://github.com/alx-low_level_programming/0x1C-makefiles/blob/main/100-Makefile)           |
+| 100-Makefile             | Advanced Makefile implementation with specific rules.    | [100-Makefile](alx-low_level_programming/0x1C-makefiles/blob/main/100-Makefile)           |
 
 ## Environment:
 - **Allowed Editors:** vi, vim, emacs
