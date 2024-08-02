@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - Generates random valid passwords for the
- *        program 101-crackme.
+ *        program 101-crackme and prints the total ASCII sum.
  *
  * Return: Always 0.
  */
@@ -25,9 +25,6 @@ int main(void)
 	if (total != 2772)
 	{
 		diff = total - 2772;
-		if (diff % 2 != 0)
-			diff++;
-
 		for (arr_loc = 0; keys[arr_loc]; arr_loc++)
 		{
 			if (keys[arr_loc] >= (33 + diff))
