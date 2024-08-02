@@ -1,38 +1,45 @@
 #include <stdio.h>
 #include "main.h"
+
 /**
- * print_buffer -  A function that prints a buffer.
+ * print_buffer - Prints the content of a buffer.
  *
- * @b: The buffer to be printed.
+ * @buffer: The buffer to be printed.
  * @size: The number of bytes to be printed from the buffer.
  */
-void print_buffer(char *b, int size)
+void print_buffer(char *buffer, int size)
 {
-	int count, count_1;
-	char final;
+	int offset, byte_index;
+	char current_char;
 
-	for (count = 0; count < size; count += 10)
+	if (size <= 0)
 	{
-		printf("%08x: ", count);
+		printf("\n");
+		return;
+	}
 
-		for (count_1 = 0; count_1 < 10; count_1++)
+	for (offset = 0; offset < size; offset += 10)
+	{
+		printf("%08x: ", offset);
+
+		for (byte_index = 0; byte_index < 10; byte_index++)
 		{
-			if (count + count_1 < size)
-				printf("%02x", b[count + count_1]);
+			if (offset + byte_index < size)
+				printf("%02x", (unsigned char)buffer[offset + byte_index]);
 			else
 				printf("  ");
 
-			if (count_1 % 2 != 0)
+			if (byte_index % 2 == 1)
 				printf(" ");
 		}
 
-		for (count_1 = 0; count_1 < 10; count_1++)
+		for (byte_index = 0; byte_index < 10; byte_index++)
 		{
-			if (count + count_1 < size)
+			if (offset + byte_index < size)
 			{
-				final = b[count + count_1];
-				if (final >= 32 && final <= 126)
-					putchar(final);
+				current_char = buffer[offset + byte_index];
+				if (current_char >= 32 && current_char <= 126)
+					putchar(current_char);
 				else
 					putchar('.');
 			}
@@ -41,3 +48,4 @@ void print_buffer(char *b, int size)
 		printf("\n");
 	}
 }
+
