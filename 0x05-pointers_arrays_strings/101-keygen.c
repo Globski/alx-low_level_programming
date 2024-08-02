@@ -3,7 +3,7 @@
 #include <time.h>
 /**
  * main - Generates random valid
- * passwords for the program 101-crackme.
+ * 	  passwords for the program 101-crackme.
  *
  * Return: Always 0.
  */
@@ -24,8 +24,8 @@ int main(void)
 
 	if (total != 2772)
 	{
-		diff = (total - 2772) / 2;
-		if ((total - 2772) % 2 != 0)
+		diff = total - 2772;
+		if (diff % 2 != 0)
 			diff++;
 
 		for (arr_loc = 0; keys[arr_loc]; arr_loc++)
