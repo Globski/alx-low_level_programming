@@ -1,53 +1,66 @@
 #include "main.h"
+
+/**
+ * print_product - Prints a product with appropriate formatting.
+ *
+ * @product: The product to print.
+ * @is_first: Boolean to indicate if it is the first number in the row.
+ */
+void print_product(int product, int is_first)
+{
+	if (!is_first)
+	{
+		_putchar(',');
+		_putchar(' ');
+
+		if (product < 10)
+		{
+			_putchar(' ');
+			_putchar(' ');
+		}
+		else if (product < 100)
+		{
+			_putchar(' ');
+		}
+	}
+
+	if (product < 10)
+	{
+		_putchar(product + '0');
+	}
+	else if (product < 100)
+	{
+		_putchar((product / 10) + '0');
+		_putchar((product % 10) + '0');
+	}
+	else
+	{
+		_putchar((product / 100) + '0');
+		_putchar(((product / 10) % 10) + '0');
+		_putchar((product % 10) + '0');
+	}
+}
+
 /**
  * print_times_table - Prints the n times table, starting with 0.
  *
- * @n: The value to be print.
+ * @n: The value of the times table to print.
  */
-
 void print_times_table(int n)
 {
-	int value, sig, sum;
+	int value, sig, product;
 
 	if (n >= 0 && n <= 15)
-{
+	{
+		for (value = 0; value <= n; value++)
+		{
+			for (sig = 0; sig <= n; sig++)
+			{
+				product = value * sig;
+				print_product(product, sig == 0);
+			}
+			_putchar('\n');
+		}
+	}
+}
 
-	value = 0;
-		while (value <= n)
-{
-	sig = 0;
-
-		while (sig <= n)
-
-{
-	sum = value * sig;
-
-
-					if (sum < 10)
-						_putchar(sum + '0');
-} 
-					else
-{
-						_putchar((sum / 10) + '0');
-						_putchar((sum % 10) + '0');
-}
-					if (sig < n)
-{
-						_putchar(' ');
-						_putchar(',');
-}
-					if (sum >= 100)
-{
-						_putchar((sum / 100) + '0');
-						_putchar(((sum / 10)) % 10 + '0')
-}
-				else if (sum <= 99 && sum >= 10)
-{
-					_putchar((sum / 10) + '0');
-}
-					_putchar((sum % 10) + '0');
-}
-					_putchar('\n');
-}
-}
-}
