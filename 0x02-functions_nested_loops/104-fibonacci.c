@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long int count, fiba = 1, fibb = 2, a_half1, a_half2;
-	unsigned long int b_half1, b_half2, half1, half2; 
+	unsigned long int b_half1, b_half2, half1, half2;
 
 	printf("%lu, %lu", fiba, fibb);
 
