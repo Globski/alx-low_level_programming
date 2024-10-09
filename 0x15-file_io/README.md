@@ -1,4 +1,3 @@
-
 # Low-Level Programming & Algorithm - File I/O
 
 This repository contains C programs for various file I/O operations. Each task is described below, along with the corresponding source code and filenames.
