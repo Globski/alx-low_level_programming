@@ -1,7 +1,7 @@
 # Alx Low-Level Programming - C Doubly linked lists
 
 ## Description
-This project focuses on implementing and manipulating doubly linked lists in C. You will learn about the structure of doubly linked lists and the various functions available to manage them. It includes various functions to manipulate and manage the list, such as adding, deleting, traversing, searching for nodes within the list, and printing nodes. the project will cover best practices in programming. By the end, you'll have a solid understanding of how to work with doubly linked lists and their basic operations.
+This project focuses on implementing and manipulating doubly linked lists in C. You will learn about the structure of doubly linked lists and the various functions available to manage them such as adding, deleting, traversing, searching for nodes within the list, and printing nodes. the project will cover best practices in programming. By the end, you'll have a solid understanding of how to work with doubly linked lists and their basic operations.
 
 ## Project Structure
 
