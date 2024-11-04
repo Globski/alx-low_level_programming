@@ -81,7 +81,6 @@ At the end of this project, you are expected to be able to:
 - Follow the guidelines for using the C functions from Python.
 - You are not allowed to use the standard library (e.g., `printf`, `puts`).
 - Implement `_putchar` for output.
-- Test your code with provided `main.c` files, but do not push them to your repository.
 
 - **Header File (`main.h`)**: Include function prototypes and the `_putchar` prototype.
 - **Source Files**: Keep each file focused with a maximum of five functions. Follow the Betty style for coding.
